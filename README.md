@@ -8,4 +8,5 @@ Repo for practicing python
 - [Bubble Sort](https://github.com/amanullahtariq/python-practice/blob/dev/cracking_coding_interview/Algorithms/bubble_sort.py)
 - [Merge Sort](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/merge_sort.py)
 - [Quick Sort](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/quick_sort.py)
+- [Counting Inversion](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/counting_inversions.py)
 
