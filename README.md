@@ -9,4 +9,5 @@ Repo for practicing python
 - [Merge Sort](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/merge_sort.py)
 - [Quick Sort](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/quick_sort.py)
 - [Counting Inversion](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/counting_inversions.py)
+- [Sorting Comparator](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/sorting_comparator.py)
 
