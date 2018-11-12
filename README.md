@@ -12,3 +12,4 @@ Repo for practicing python
 - [Sorting Comparator](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/sorting_comparator.py)
 
 #### DataStructures
+- [Array Left rotation](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/array_left_rotation.py)
