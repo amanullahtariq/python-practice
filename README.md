@@ -14,3 +14,4 @@ Repo for practicing python
 #### DataStructures
 - [Array Left rotation](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/array_left_rotation.py)
 - [Linked List](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/linked_list.py)
+- [Using Heap to find the running median](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/heap_finding_the_running_median.py)
