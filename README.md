@@ -17,3 +17,5 @@ Repo for practicing python
 - [Using Heap to find the running median](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/heap_finding_the_running_median.py)
 - [Tree](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/tree.py)
 - [Tries Contacts](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/tries_contacts.py)
+
+#### Techniques And Concept
