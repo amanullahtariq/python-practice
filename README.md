@@ -4,7 +4,7 @@ Repo for practicing python
 ### Python
 - [Array Right Rotation](https://github.com/amanullahtariq/python-practice/blob/master/Python/array_right_rotation)
 - [Binary Gap](https://github.com/amanullahtariq/python-practice/blob/master/Python/binary_gap.py)
--[Bon Appetit](https://github.com/amanullahtariq/python-practice/blob/master/Python/bon_appetit.py)
+- [Bon Appetit](https://github.com/amanullahtariq/python-practice/blob/master/Python/bon_appetit.py)
 
 ### Cracking Coding Interview
 #### Algorithm
