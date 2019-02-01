@@ -17,22 +17,28 @@ def flush(hand):
 
 
 
-def kind(n,rank):
+def kind(n,ranks):
     """
-    return the first rank that the hand has exactly
-    n of. For a hand with 4 sevens this function would
-    return 7
+    Return the first rank that this hand has exactly n of.
+    Return None if there is no n-of-a-kind in the hand.
+    """
+    for r in ranks:
+        if ranks.count(r) == n: return r
 
-    """
-    pass
+    return None
 
 def two_pair(ranks):
-    """if there is a two pair, this function returns
-    there corresponding ranks as a tuple. For example,
-    a hand with 2 twos and 2 fours would cause this function
-    to return (4,2)
     """
-    pass
+    if there are two pair, return two ranks as a
+    tuple: (highest, lowest); other return None.
+    """
+    pair = kind(2, ranks)
+    low_pair = kind(2, list(reversed(ranks)))
+
+    if pair and low_pair != pair:
+        return (pair,low_pair)
+
+    return None
 
 
 
