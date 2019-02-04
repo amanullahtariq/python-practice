@@ -54,13 +54,14 @@ def card_ranks(cards):
     hand_list = '--23456789TJQKA'
     ranks = [ hand_list.index(r)  for r, s in cards]
     ranks.sort(reverse=True)
-    return ranks
 
-
+    return [5,4,2,1] if (ranks == [14, 5, 4, 3, 2]) else ranks
 
 
 def hand_rank(hand):
-    "Return a value indicating the ranking of a hand"
+    """
+    Return a value indicating the ranking of a hand
+    """
 
     #Get the card in the sorted order
     ranks = card_ranks(hand)
@@ -102,12 +103,11 @@ def hand_rank(hand):
         return (0, ranks)
 
 
-
-
-
-
 def test():
-    "Test cases for the functions in poker program"
+    """
+    Test cases for the functions in poker program
+    :return:
+    """
 
     # Straight flush
     sf = "6C 7C 8C 9C TC".split()
@@ -120,6 +120,19 @@ def test():
 
     # two pair
     tp = "5S 5D 9H 9C 6S".split()
+
+    # A-5 straight
+    s1 = "AS 2S 3S 4S 5C".split()
+
+    # 2-6 straight
+    s2 = "2C 3C 4C 5S 6S"
+
+    # A High
+
+
+
+    # 7-High
+    sh = "2S 3S 4S 6C 7D".split()
 
     fkranks = card_ranks(fk)
     tpranks = card_ranks(tp)
@@ -142,16 +155,18 @@ def test():
     assert card_ranks(fk) == [9, 9, 9, 9, 7]
     assert card_ranks(fh) == [10, 10, 10, 7, 7]
 
-    # assert poker([sf, fk, fh]) == sf
-    # assert poker([fk, fh]) == fk
-    # assert poker([fh,fh]) == fh
-    # assert poker([sf]) == sf
-    # assert poker([sf] + 99*[fh]) == sf
+    assert poker([sf, fk, fh]) == sf
+    assert poker([fk, fh]) == fk
+    assert poker([fh,fh]) == fh
+    assert poker([sf]) == sf
+    assert poker([sf] + 99*[fh]) == sf
 
-    # assert hand_rank(sf) == (8,10)
-    # assert hand_rank(fk) == (7,9,7)
-    # assert hand_rank(fh) == (6,10,7)
+    assert hand_rank(sf) == (8,10)
+    assert hand_rank(fk) == (7,9,7)
+    assert hand_rank(fh) == (6,10,7)
 
 
     return 'tests pass'
 
+
+test()
