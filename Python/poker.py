@@ -52,7 +52,7 @@ def card_ranks(cards):
     :return:
     """
     hand_list = '--23456789TJQKA'
-    ranks = [ hand_list.index(r)  for r, s in cards]
+    ranks = [ hand_list.index(r) for r, s in cards]
     ranks.sort(reverse=True)
 
     return [5,4,2,1] if (ranks == [14, 5, 4, 3, 2]) else ranks
