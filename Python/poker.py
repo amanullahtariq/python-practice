@@ -1,21 +1,44 @@
 def poker(hands):
-    "Return the best hand: poker([hand1, hand2, ....]) ==> hand1"
-    return max(hands, key=hand_rank)
+    """
+    Return a list of winning hands: poker([hand,.....]) = > [hand,....]
+    """
+    return allmax(hands, key=hand_rank)
+
+
+def allmax(iterable, key=None):
+    """
+    Return a list of all items equal to the max of the iterable.
+    :param iterable:
+    :param key:
+    :return:
+    """
+
+    result = []
+    maxval = None
+
+    key = key or (lambda x: x)
+
+
+    for x in iterable:
+        xval = key(x)
+        if not result or xval > maxval:
+            result, maxval = [x], xval
+        elif xval == maxval:
+            result.append(x)
+
+    return result
+
 
 
 def straight(ranks):
      "Return True if the ordered ranks form a 5-card straight."
      return  (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5)
 
-
-
 def flush(hand):
     "Return True if all the cards have the same suit"
 
     suits = [s for r,s in hand]
     return len(set(suits)) == 1
-
-
 
 def kind(n,ranks):
     """
@@ -39,7 +62,6 @@ def two_pair(ranks):
         return (pair,low_pair)
 
     return None
-
 
 
 def card_ranks(cards):
