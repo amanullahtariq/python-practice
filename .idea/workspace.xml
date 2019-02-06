@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81113b32-799c-46fe-ab81-9dc364931914" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python/poker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/poker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,10 +15,10 @@
     <session id="-1984159283">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -32,12 +33,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4096" />
+          <entry key="py" value="4622" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4096" />
+          <entry key="Python" value="4622" />
         </counts>
       </usages-collector>
     </session>
@@ -47,19 +48,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Python/poker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="188" column="4" selection-start-line="188" selection-start-column="6" selection-end-line="192" />
+            <state relative-caret-position="30">
+              <caret line="2" column="110" selection-start-line="2" selection-start-column="110" selection-end-line="2" selection-end-column="110" />
               <folding>
-                <element signature="e#22#146#0" />
-                <element signature="e#435#562#0" />
-                <element signature="e#477#591#0" />
-                <element signature="e#618#822#0" />
-                <element signature="e#1144#1298#1" />
-                <marker date="1549359778157" expanded="true" signature="200:605" ph="..." />
-                <marker date="1549359778157" expanded="true" signature="1146:1418" ph="..." />
-                <marker date="1549359778157" expanded="true" signature="1780:1781" ph="..." />
-                <marker date="1549359778157" expanded="true" signature="2665:2667" ph="..." />
-                <marker date="1549359778157" expanded="true" signature="4116:4121" ph="..." />
+                <marker date="1549450756333" expanded="true" signature="329:732" ph="..." />
+                <marker date="1549450756333" expanded="true" signature="1275:1548" ph="..." />
+                <marker date="1549450756333" expanded="true" signature="1912:1913" ph="..." />
+                <marker date="1549450756333" expanded="true" signature="2807:2810" ph="..." />
+                <marker date="1549450756333" expanded="true" signature="4367:4372" ph="..." />
+                <marker date="1549450756333" expanded="true" signature="4661:4666" ph="..." />
               </folding>
             </state>
           </provider>
@@ -87,20 +84,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="python-practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python-practice" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -117,7 +101,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.poker">
+    <configuration name="poker" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-practice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/poker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in poker.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python-practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,8 +138,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python tests.pytest in poker.py" />
+      <item itemvalue="Python.poker" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.poker" />
         <item itemvalue="Python tests.pytest in poker.py" />
       </list>
     </recent_temporary>
@@ -153,27 +163,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_poker_py - 2019.01.30 at 17h 25m 14s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.01.30 at 17h 25m 44s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.01.30 at 18h 10m 14s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.01.30 at 18h 10m 27s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.01.30 at 18h 10m 52s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.01.30 at 18h 11m 05s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.02.01 at 17h 00m 14s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_poker_py - 2019.02.05 at 10h 42m 22s.xml">
       <configuration name="pytest in poker.py" configurationId="tests" />
     </history-entry>
@@ -181,6 +170,27 @@
       <configuration name="pytest in poker.py" configurationId="tests" />
     </history-entry>
     <history-entry file="pytest_in_poker_py - 2019.02.05 at 10h 42m 55s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.05 at 10h 43m 00s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 52m 17s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 53m 05s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 53m 50s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 54m 23s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 54m 28s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 54m 57s.xml">
       <configuration name="pytest in poker.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -193,12 +203,12 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37139562" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.7058824" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298731" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.28373703" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32866243" />
@@ -213,19 +223,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Python/poker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="188" column="4" selection-start-line="188" selection-start-column="6" selection-end-line="192" />
+        <state relative-caret-position="30">
+          <caret line="2" column="110" selection-start-line="2" selection-start-column="110" selection-end-line="2" selection-end-column="110" />
           <folding>
-            <element signature="e#22#146#0" />
-            <element signature="e#435#562#0" />
-            <element signature="e#477#591#0" />
-            <element signature="e#618#822#0" />
-            <element signature="e#1144#1298#1" />
-            <marker date="1549359778157" expanded="true" signature="200:605" ph="..." />
-            <marker date="1549359778157" expanded="true" signature="1146:1418" ph="..." />
-            <marker date="1549359778157" expanded="true" signature="1780:1781" ph="..." />
-            <marker date="1549359778157" expanded="true" signature="2665:2667" ph="..." />
-            <marker date="1549359778157" expanded="true" signature="4116:4121" ph="..." />
+            <marker date="1549450756333" expanded="true" signature="329:732" ph="..." />
+            <marker date="1549450756333" expanded="true" signature="1275:1548" ph="..." />
+            <marker date="1549450756333" expanded="true" signature="1912:1913" ph="..." />
+            <marker date="1549450756333" expanded="true" signature="2807:2810" ph="..." />
+            <marker date="1549450756333" expanded="true" signature="4367:4372" ph="..." />
+            <marker date="1549450756333" expanded="true" signature="4661:4666" ph="..." />
           </folding>
         </state>
       </provider>
