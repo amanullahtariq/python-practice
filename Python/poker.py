@@ -86,14 +86,33 @@ def card_ranks(cards):
 
     return [5, 4, 2, 1] if (ranks == [14, 5, 4, 3, 2]) else ranks
 
+def group(items):
+    """
+    Retunrs a lis of [(count,x) ...] , highest count first, then highest x first.
+    :param items:
+    :return:
+    """
+
 
 def hand_rank(hand):
     """
-    Return a value indicating the ranking of a hand
+    Return a value indicating how high the hand ranks
+
     """
 
-    # Get the card in the sorted order
-    ranks = card_ranks(hand)
+    # counts is the count of each rank; ranks lists corresponding ranks
+    # E.g. '7 T 7 9 7' => counts = (3,1,1) ; ranks = (7,10,9)]
+
+    groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
+    counts, ranks = unzip(groups)
+
+    if ranks == (14,5,4,3,2):
+        ranks = (5,4,3,2,1)
+
+
+    is_straight = straight(ranks)
+    is_flush = flush(hand)
+
 
     # straight flush
     if straight(ranks) and flush(hand):
