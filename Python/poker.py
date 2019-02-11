@@ -115,7 +115,7 @@ def hand_rank(hand):
 
 
     # straight flush
-    if straight(ranks) and flush(hand):
+    if is_straight and is_flush:
         return (8, max(ranks))
 
     # 4 of a kind
