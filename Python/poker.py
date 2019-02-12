@@ -1,7 +1,7 @@
 import random
 
-hand_names = ['High Card', 'Pair', '2 Pair', '3 of a Kind', 'Straight', 'Flush', 'Full House', '4 of a Kind', 'Straight Flush']
-
+hand_names = ['High Card', 'Pair', '2 Pair', '3 of a Kind', 'Straight', 'Flush', 'Full House', '4 of a Kind',
+              'Straight Flush']
 
 
 def poker(hands):
@@ -86,12 +86,21 @@ def card_ranks(cards):
 
     return [5, 4, 2, 1] if (ranks == [14, 5, 4, 3, 2]) else ranks
 
+
 def group(items):
     """
     Retunrs a lis of [(count,x) ...] , highest count first, then highest x first.
     :param items:
     :return:
     """
+    groups = [(items. count(x),x) for x in set(items)]
+
+    # highest come first
+    return sorted(groups, reverse=True)
+
+
+def unzip(pairs):
+    return zip(*pairs)
 
 
 def hand_rank(hand):
@@ -106,49 +115,29 @@ def hand_rank(hand):
     groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
     counts, ranks = unzip(groups)
 
-    if ranks == (14,5,4,3,2):
-        ranks = (5,4,3,2,1)
-
+    if ranks == (14, 5, 4, 3, 2):
+        ranks = (5, 4, 3, 2, 1)
 
     is_straight = straight(ranks)
     is_flush = flush(hand)
 
 
-    # straight flush
-    if is_straight and is_flush:
-        return (8, max(ranks))
 
-    # 4 of a kind
-    elif kind(4, ranks):
-        return (7, kind(4, ranks), kind(1, ranks))
 
-    # full house
-    elif kind(3, ranks) and kind(2, ranks):
-        return (6, kind(3, ranks), kind(2, ranks))
+    return [(9 if (5,) == counts else
+             8 if is_straight and is_flush else
+             7 if (4, 1) == counts else
+             6 if (3, 2) == counts else
+             5 if is_flush else
+             4 if is_straight else
+             3 if (3,1,1) else
+             2 if (2,2,1) else
+             1 if (2, 1, 1, 1) == counts else
+             0), ranks]
 
-    # flush
-    elif flush(hand):
-        return (5, ranks)
 
-    # Straight
-    elif straight(ranks):
-        return (4, max(ranks))
+count_rankings = {(5,) : 10 , (4,1): 7, }
 
-    # 3 of a kind
-    elif kind(3, ranks):
-        return (3, kind(3, ranks), ranks)
-
-    # Two-pair
-    elif two_pair(ranks):
-        return (2, two_pair(ranks), ranks)
-
-    # Kind
-    elif kind(2, ranks):
-        return (1, kind(2, ranks), ranks)
-
-    # Nothing
-    else:
-        return (0, ranks)
 
 #
 # def test():
@@ -239,13 +228,13 @@ def hand_percentage(n=700 * 1000):
     """
     counts = [0] * 9
 
-    for i in range(int(n/10)):
+    for i in range(int(n / 10)):
         for hand in deal(10):
             ranking = hand_rank(hand)[0]
             counts[ranking] += 1
 
     for i in reversed(range(9)):
-        print("%14s: %6.3f %%" % (hand_names[i], 100.0*counts[i] / n))
+        print("%14s: %6.3f %%" % (hand_names[i], 100.0 * counts[i] / n))
 
 
 hand_percentage()
