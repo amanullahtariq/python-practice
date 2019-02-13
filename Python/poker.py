@@ -39,7 +39,7 @@ def straight(ranks):
     return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5)
 
 
-def flush(hand):
+def is_flush(hand):
     "Return True if all the cards have the same suit"
 
     suits = [s for r, s in hand]
@@ -118,25 +118,12 @@ def hand_rank(hand):
     if ranks == (14, 5, 4, 3, 2):
         ranks = (5, 4, 3, 2, 1)
 
-    is_straight = straight(ranks)
-    is_flush = flush(hand)
+    straight = len(set(ranks)) == 5 and max(ranks) - min(ranks) == 4
+    flush = is_flush(hand)
 
+    return max(count_rankings[counts], 4* straight + 5*flush), ranks
 
-
-
-    return [(9 if (5,) == counts else
-             8 if is_straight and is_flush else
-             7 if (4, 1) == counts else
-             6 if (3, 2) == counts else
-             5 if is_flush else
-             4 if is_straight else
-             3 if (3,1,1) else
-             2 if (2,2,1) else
-             1 if (2, 1, 1, 1) == counts else
-             0), ranks]
-
-
-count_rankings = {(5,) : 10 , (4,1): 7, }
+count_rankings = {(5,) : 10 , (4,1): 7, (3,2): 6, (3,1,1):3, (2,2,1):2, (2,1,1,1):1, (1,1,1,1,1):0}
 
 
 #
@@ -237,4 +224,4 @@ def hand_percentage(n=700 * 1000):
         print("%14s: %6.3f %%" % (hand_names[i], 100.0 * counts[i] / n))
 
 
-hand_percentage()
+print( deal(2,7))
