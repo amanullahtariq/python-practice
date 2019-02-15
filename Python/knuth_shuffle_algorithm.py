@@ -25,12 +25,15 @@ def swap(deck, i , j):
     :param j:
     :return:
     """
-    print('swap ', i , j)
+    # print('swap ', i , j)
     deck[i], deck[j] = deck[j], deck[i]
 
 
 
 input = list('abcd')
+print(shuffle(input))
+
+input = list('abc')
 print(shuffle(input))
 
 
