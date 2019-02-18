@@ -29,7 +29,6 @@ def swap(deck, i , j):
     deck[i], deck[j] = deck[j], deck[i]
 
 
-
 input = list('abcd')
 print(shuffle(input))
 
