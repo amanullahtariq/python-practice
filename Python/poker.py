@@ -1,3 +1,4 @@
+import itertools
 import random
 
 hand_names = ['High Card', 'Pair', '2 Pair', '3 of a Kind', 'Straight', 'Flush', 'Full House', '4 of a Kind',
@@ -126,68 +127,16 @@ def hand_rank(hand):
 count_rankings = {(5,) : 10 , (4,1): 7, (3,2): 6, (3,1,1):3, (2,2,1):2, (2,1,1,1):1, (1,1,1,1,1):0}
 
 
-#
-# def test():
-#     """
-#     Test cases for the functions in poker program
-#     :return:
-#     """
-#
-#     # Straight flush
-#     sf = "6C 7C 8C 9C TC".split()
-#
-#     # four of a kind
-#     fk = "9D 9H 9S 9C 7D".split()
-#
-#     # Full House
-#     fh = "TD TC TH 7C 7D".split()
-#
-#     # two pair
-#     tp = "5S 5D 9H 9C 6S".split()
-#
-#     # A-5 straight
-#     s1 = "AS 2S 3S 4S 5C".split()
-#
-#     # 2-6 straight
-#     s2 = "2C 3C 4C 5S 6S"
-#
-#     # A High
-#
-#     # 7-High
-#     sh = "2S 3S 4S 6C 7D".split()
-#
-#     fkranks = card_ranks(fk)
-#     tpranks = card_ranks(tp)
-#
-#     assert kind(4, fkranks) == 9
-#     assert kind(3, fkranks) == None
-#     assert kind(2, fkranks) == None
-#     assert kind(1, fkranks) == 7
-#
-#     assert two_pair(fkranks) == None
-#     assert two_pair(tpranks) == (9, 5)
-#
-#     assert straight([9, 8, 7, 6, 5]) == True
-#     assert straight([9, 8, 8, 6, 5]) == False
-#
-#     assert flush(sf) == True
-#     assert flush(fk) == False
-#
-#     assert card_ranks(sf) == [10, 9, 8, 7, 6]
-#     assert card_ranks(fk) == [9, 9, 9, 9, 7]
-#     assert card_ranks(fh) == [10, 10, 10, 7, 7]
-#
-#     # assert poker([sf, fk, fh]) == fh
-#     # assert poker([fk, fh]) == fk
-#     # assert poker([fh,fh]) == fh
-#     # assert poker([sf]) == sf
-#     # assert poker([sf] + 99*[fh]) == sf
-#
-#     assert hand_rank(sf) == (8, 10)
-#     assert hand_rank(fk) == (7, 9, 7)
-#     assert hand_rank(fh) == (6, 10, 7)
-#
-#     return 'tests pass'
+def best_hand(hand):
+    """
+    From a 7-card hand, return the best 5 card hand.
+    :param hand:
+    :return:
+    """
+
+    return  max(itertools.combinations(hand,5),key=hand_rank)
+
+
 
 
 mydeck = [r + s for r in '2345679TJQKA' for s in 'SHDC']
@@ -224,4 +173,19 @@ def hand_percentage(n=700 * 1000):
         print("%14s: %6.3f %%" % (hand_names[i], 100.0 * counts[i] / n))
 
 
-print( deal(2,7))
+def best_wild_hand(hand):
+    """
+    Try all values for jokers in all 5-card selections
+
+    :param hand:
+    :return:
+    """
+
+def test_best_wild_hand():
+    assert (sorted(best_wild_hand("6C 7C 8C 9C TC 5C ?B".split()))
+            == ['7C', '8C', '9C', 'JC', 'TC'])
+    assert (sorted(best_wild_hand("TD TC 5H 5C 7C ?R ?B".split()))
+            == ['7C', 'TC', 'TD', 'TH', 'TS'])
+    assert (sorted(best_wild_hand("JD TC TH 7C 7D 7S 7H".split()))
+            == ['7C', '7D', '7H', '7S', 'JD'])
+    return 'test_best_wild_hand passes'
