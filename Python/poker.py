@@ -1,130 +1,134 @@
+# CS 212, hw1-2: Jokers Wild
+#
+# -----------------
+# User Instructions
+#
+# Write a function best_wild_hand(hand) that takes as
+# input a 7-card hand and returns the best 5 card hand.
+# In this problem, it is possible for a hand to include
+# jokers. Jokers will be treated as 'wild cards' which
+# can take any rank or suit of the same color. The 
+# black joker, '?B', can be used as any spade or club
+# and the red joker, '?R', can be used as any heart 
+# or diamond.
+#
+# The itertools library may be helpful. Feel free to 
+# define multiple functions if it helps you solve the
+# problem. 
+#
+# -----------------
+# Grading Notes
+# 
+# Muliple correct answers will be accepted in cases 
+# where the best hand is ambiguous (for example, if 
+# you have 4 kings and 3 queens, there are three best
+# hands: 4 kings along with any of the three queens).
+
 import itertools
-import random
 
-hand_names = ['High Card', 'Pair', '2 Pair', '3 of a Kind', 'Straight', 'Flush', 'Full House', '4 of a Kind',
-              'Straight Flush']
-
-
-def poker(hands):
-    """
-    Return a list of winning hands: poker([hand,.....]) = > [hand,....]
-    """
-    return allmax(hands, key=hand_rank)
+allranks = "23456789TJQKA"
+blackcards = [r + s for r in allranks for s in 'SC']
+redcards = [r + s for r in allranks for s in 'DH']
 
 
-def allmax(iterable, key=None):
-    """
-    Return a list of all items equal to the max of the iterable.
-    :param iterable:
-    :param key:
-    :return:
-    """
+def best_wild_hand(hand):
+    "Try all values for jokers in all 5-card selections."
 
-    result = []
-    maxval = None
+    hands = set(best_hand(h) for h in itertools.product(*map(replacement, hand)))
 
-    key = key or (lambda x: x)
-
-    for x in iterable:
-        xval = key(x)
-        if not result or xval > maxval:
-            result, maxval = [x], xval
-        elif xval == maxval:
-            result.append(x)
-
-    return result
+    return max(hands, key=hand_rank)
 
 
-def straight(ranks):
-    "Return True if the ordered ranks form a 5-card straight."
-    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5)
+def replacement(card):
+    if card == "?B":
+        return blackcards
+    elif card == "?R":
+        return redcards
+    else:
+        return [card]
 
 
-def is_flush(hand):
-    "Return True if all the cards have the same suit"
+def test_best_wild_hand():
+    assert (sorted(best_wild_hand("6C 7C 8C 9C TC 5C ?B".split()))
+            == ['7C', '8C', '9C', 'JC', 'TC'])
 
+    print(sorted(best_wild_hand("TD TC 5H 5C 7C ?R ?B".split())))
+
+    assert (sorted(best_wild_hand("TD TC 5H 5C 7C ?R ?B".split()))
+            == ['7C', 'TC', 'TD', 'TH', 'TS'])
+    
+    assert (sorted(best_wild_hand("JD TC TH 7C 7D 7S 7H".split()))
+            == ['7C', '7D', '7H', '7S', 'JD'])
+    return 'test_best_wild_hand passes'
+
+
+# ------------------
+# Provided Functions
+# 
+# You may want to use some of the functions which
+# you have already defined in the unit to write 
+# your best_hand function.
+
+def hand_rank(hand):
+    "Return a value indicating the ranking of a hand."
+    ranks = card_ranks(hand)
+    if straight(ranks) and flush(hand):
+        return (8, max(ranks))
+    elif kind(4, ranks):
+        return (7, kind(4, ranks), kind(1, ranks))
+    elif kind(3, ranks) and kind(2, ranks):
+        return (6, kind(3, ranks), kind(2, ranks))
+    elif flush(hand):
+        return (5, ranks)
+    elif straight(ranks):
+        return (4, max(ranks))
+    elif kind(3, ranks):
+        return (3, kind(3, ranks), ranks)
+    elif two_pair(ranks):
+        return (2, two_pair(ranks), ranks)
+    elif kind(2, ranks):
+        return (1, kind(2, ranks), ranks)
+    else:
+        return (0, ranks)
+
+
+def card_ranks(hand):
+    "Return a list of the ranks, sorted with higher first."
+    ranks = ['--23456789TJQKA'.index(r) for r, s in hand]
+    ranks.sort(reverse=True)
+    return [5, 4, 3, 2, 1] if (ranks == [14, 5, 4, 3, 2]) else ranks
+
+
+def flush(hand):
+    "Return True if all the cards have the same suit."
     suits = [s for r, s in hand]
     return len(set(suits)) == 1
 
 
+def straight(ranks):
+    """Return True if the ordered 
+    ranks form a 5-card straight."""
+    return (max(ranks) - min(ranks) == 4) and len(set(ranks)) == 5
+
+
 def kind(n, ranks):
-    """
-    Return the first rank that this hand has exactly n of.
-    Return None if there is no n-of-a-kind in the hand.
-    """
+    """Return the first rank that this hand has 
+    exactly n-of-a-kind of. Return None if there 
+    is no n-of-a-kind in the hand."""
     for r in ranks:
         if ranks.count(r) == n: return r
-
     return None
 
 
 def two_pair(ranks):
-    """
-    if there are two pair, return two ranks as a
-    tuple: (highest, lowest); other return None.
-    """
+    """If there are two pair here, return the two 
+    ranks of the two pairs, else None."""
     pair = kind(2, ranks)
-    low_pair = kind(2, list(reversed(ranks)))
-
-    if pair and low_pair != pair:
-        return (pair, low_pair)
-
-    return None
-
-
-def card_ranks(cards):
-    """
-    Returns an ORDERED tuple of the ranks in a hand
-    (where the order goes from highest to lowest
-    rank).
-
-    :param hand:
-    :return:
-    """
-    hand_list = '--23456789TJQKA'
-    ranks = [hand_list.index(r) for r, s in cards]
-    ranks.sort(reverse=True)
-
-    return [5, 4, 2, 1] if (ranks == [14, 5, 4, 3, 2]) else ranks
-
-
-def group(items):
-    """
-    Retunrs a lis of [(count,x) ...] , highest count first, then highest x first.
-    :param items:
-    :return:
-    """
-    groups = [(items. count(x),x) for x in set(items)]
-
-    # highest come first
-    return sorted(groups, reverse=True)
-
-
-def unzip(pairs):
-    return zip(*pairs)
-
-
-def hand_rank(hand):
-    """
-    Return a value indicating how high the hand ranks
-
-    """
-
-    # counts is the count of each rank; ranks lists corresponding ranks
-    # E.g. '7 T 7 9 7' => counts = (3,1,1) ; ranks = (7,10,9)]
-
-    groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
-    counts, ranks = unzip(groups)
-
-    if ranks == (14, 5, 4, 3, 2):
-        ranks = (5, 4, 3, 2, 1)
-
-    straight = len(set(ranks)) == 5 and max(ranks) - min(ranks) == 4
-    flush = is_flush(hand)
-
-    return max(count_rankings[counts], 4* straight + 5*flush), ranks
-
-count_rankings = {(5,) : 10 , (4,1): 7, (3,2): 6, (3,1,1):3, (2,2,1):2, (2,1,1,1):1, (1,1,1,1,1):0}
+    lowpair = kind(2, list(reversed(ranks)))
+    if pair and lowpair != pair:
+        return (pair, lowpair)
+    else:
+        return None
 
 
 def best_hand(hand):
@@ -134,58 +138,4 @@ def best_hand(hand):
     :return:
     """
 
-    return  max(itertools.combinations(hand,5),key=hand_rank)
-
-
-
-
-mydeck = [r + s for r in '2345679TJQKA' for s in 'SHDC']
-
-
-def deal(numhands, n=5, deck=mydeck):
-    """
-    take a deck shuffle it and
-    :param numhands: number of players
-    :param n: number of cards
-    :param deck: deck of cards to use
-    :return:
-    """
-
-    random.shuffle(deck)
-
-    return [deck[n * i: n * (i + 1)] for i in range(numhands)]
-
-
-def hand_percentage(n=700 * 1000):
-    """
-    Sample n random hands and print a table of percentages for each type of hand
-    :param n:
-    :return:
-    """
-    counts = [0] * 9
-
-    for i in range(int(n / 10)):
-        for hand in deal(10):
-            ranking = hand_rank(hand)[0]
-            counts[ranking] += 1
-
-    for i in reversed(range(9)):
-        print("%14s: %6.3f %%" % (hand_names[i], 100.0 * counts[i] / n))
-
-
-def best_wild_hand(hand):
-    """
-    Try all values for jokers in all 5-card selections
-
-    :param hand:
-    :return:
-    """
-
-def test_best_wild_hand():
-    assert (sorted(best_wild_hand("6C 7C 8C 9C TC 5C ?B".split()))
-            == ['7C', '8C', '9C', 'JC', 'TC'])
-    assert (sorted(best_wild_hand("TD TC 5H 5C 7C ?R ?B".split()))
-            == ['7C', 'TC', 'TD', 'TH', 'TS'])
-    assert (sorted(best_wild_hand("JD TC TH 7C 7D 7S 7H".split()))
-            == ['7C', '7D', '7H', '7S', 'JD'])
-    return 'test_best_wild_hand passes'
+    return max(itertools.combinations(hand, 5), key=hand_rank)

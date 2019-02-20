@@ -15,7 +15,7 @@
     <session id="-1984159283">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="8" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
@@ -37,13 +37,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="44" />
-          <entry key="py" value="6720" />
+          <entry key="py" value="7261" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="44" />
-          <entry key="Python" value="6720" />
+          <entry key="Python" value="7261" />
         </counts>
       </usages-collector>
     </session>
@@ -53,19 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Python/poker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="190" column="39" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-                <marker date="1550513059781" expanded="true" signature="355:758" ph="..." />
-                <marker date="1550513059781" expanded="true" signature="1304:1577" ph="..." />
-                <marker date="1550513059781" expanded="true" signature="1959:2255" ph="..." />
-                <marker date="1550513059781" expanded="true" signature="2229:2255" ph="..." />
-                <marker date="1550513059781" expanded="true" signature="2254:2255" ph="..." />
-                <marker date="1550513059781" expanded="true" signature="2275:2280" ph="..." />
-                <marker date="1550513059781" expanded="true" signature="3103:3105" ph="..." />
-                <marker date="1550513059781" expanded="true" signature="4046:4051" ph="..." />
-              </folding>
+            <state relative-caret-position="471">
+              <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -97,10 +86,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="x" value="-18" />
+    <option name="y" value="-18" />
+    <option name="width" value="3876" />
+    <option name="height" value="2076" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -136,7 +125,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.knuth_shuffle_algorithm">
+  <component name="RunManager" selected="Python tests.pytest in poker.py">
     <configuration name="knuth_shuffle_algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python-practice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,9 +190,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in poker.py" />
         <item itemvalue="Python.knuth_shuffle_algorithm" />
         <item itemvalue="Python.poker" />
-        <item itemvalue="Python tests.pytest in poker.py" />
       </list>
     </recent_temporary>
   </component>
@@ -221,27 +210,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_poker_py - 2019.02.05 at 10h 42m 22s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.02.05 at 10h 42m 45s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.02.05 at 10h 42m 55s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.02.05 at 10h 43m 00s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 52m 17s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 53m 05s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 53m 50s.xml">
-      <configuration name="pytest in poker.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 54m 23s.xml">
       <configuration name="pytest in poker.py" configurationId="tests" />
     </history-entry>
@@ -249,6 +217,27 @@
       <configuration name="pytest in poker.py" configurationId="tests" />
     </history-entry>
     <history-entry file="pytest_in_poker_py - 2019.02.06 at 11h 54m 57s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.19 at 14h 48m 27s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.19 at 14h 48m 40s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.19 at 14h 50m 12s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.19 at 14h 50m 35s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.19 at 14h 50m 45s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.19 at 14h 50m 57s.xml">
+      <configuration name="pytest in poker.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_poker_py - 2019.02.19 at 14h 57m 45s.xml">
       <configuration name="pytest in poker.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -262,7 +251,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2542735" />
@@ -270,7 +259,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43439716" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43367934" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -314,19 +303,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Python/poker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="190" column="39" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <marker date="1550513059781" expanded="true" signature="355:758" ph="..." />
-            <marker date="1550513059781" expanded="true" signature="1304:1577" ph="..." />
-            <marker date="1550513059781" expanded="true" signature="1959:2255" ph="..." />
-            <marker date="1550513059781" expanded="true" signature="2229:2255" ph="..." />
-            <marker date="1550513059781" expanded="true" signature="2254:2255" ph="..." />
-            <marker date="1550513059781" expanded="true" signature="2275:2280" ph="..." />
-            <marker date="1550513059781" expanded="true" signature="3103:3105" ph="..." />
-            <marker date="1550513059781" expanded="true" signature="4046:4051" ph="..." />
-          </folding>
+        <state relative-caret-position="471">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
         </state>
       </provider>
     </entry>
