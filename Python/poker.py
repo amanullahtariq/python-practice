@@ -137,5 +137,4 @@ def best_hand(hand):
     :param hand:
     :return:
     """
-
     return max(itertools.combinations(hand, 5), key=hand_rank)
