@@ -7,7 +7,7 @@ Repo for practicing python
 - [Bon Appetit](https://github.com/amanullahtariq/python-practice/blob/master/Python/bon_appetit.py)
 - [Compare Triplets](https://github.com/amanullahtariq/python-practice/blob/dev/Python/compare_triplets.py)
 - [Poker] ()
-- [Knuth Fisher Yates Shuffle Algorithm]
+- [Knuth Fisher Yates Shuffle Algorithm]()
 
 
 ### Cracking Coding Interview
