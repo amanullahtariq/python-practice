@@ -7,8 +7,8 @@ My play ground for practicing python
 - [Bon Appetit](https://github.com/amanullahtariq/python-practice/blob/master/Python/bon_appetit.py)
 - [Compare Triplets](https://github.com/amanullahtariq/python-practice/blob/dev/Python/compare_triplets.py)
 
-### [Design Of Computer Porgrams]
-Created from the lectures in Udacity(https://classroom.udacity.com/courses/cs212/lessons/48632874/concepts/487343780923)
+### Design Of Computer Porgrams
+Created from the lectures in [Udacity](https://classroom.udacity.com/courses/cs212/lessons/48632874/concepts/487343780923)
 - [Poker]()
 - [Knuth Fisher Yates Shuffle Algorithm]()
 
