@@ -9,7 +9,7 @@ My play ground for practicing python
 
 ### Design Of Computer Porgrams
 Created from the lectures in [Udacity](https://classroom.udacity.com/courses/cs212/lessons/48632874/concepts/487343780923)
--  [Poker](https://github.com/amanullahtariq/python-practice/blob/dev/Python/poker.py)
+-[Poker](https://github.com/amanullahtariq/python-practice/blob/dev/Python/poker.py)
 - [Knuth Fisher Yates Shuffle Algorithm](https://github.com/amanullahtariq/python-practice/blob/master/Python/knuth_shuffle_algorithm.py)
 
 ### Cracking Coding Interview
