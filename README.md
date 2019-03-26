@@ -5,7 +5,7 @@ My play ground for practicing python
 - [Array Right Rotation](https://github.com/amanullahtariq/python-practice/blob/master/Python/array_right_rotation)
 - [Binary Gap](https://github.com/amanullahtariq/python-practice/blob/master/Python/binary_gap.py)
 - [Bon Appetit](https://github.com/amanullahtariq/python-practice/blob/master/Python/bon_appetit.py)
--[Compare Triplets](https://github.com/amanullahtariq/python-practice/blob/dev/Python/compare_triplets.py)
+- [Compare Triplets](https://github.com/amanullahtariq/python-practice/blob/dev/Python/compare_triplets.py)
 
 
 ## Design Of Computer Porgrams
