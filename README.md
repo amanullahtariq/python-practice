@@ -1,5 +1,5 @@
 # Python Practice
-My play ground for practicing python
+My play ground for practicing python.
 
 ## Python 
 - [Array Right Rotation](https://github.com/amanullahtariq/python-practice/blob/master/Python/array_right_rotation)
