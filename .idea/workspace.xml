@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81113b32-799c-46fe-ab81-9dc364931914" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/poker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/poker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,23 +14,24 @@
     <session id="-1984159283">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.0" value="9" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.0" value="10" />
+          <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="4" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="4" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -51,12 +51,8 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Python/poker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/multiple_output_classification.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -82,14 +78,15 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Python/knuth_shuffle_algorithm.py" />
         <option value="$PROJECT_DIR$/Python/poker.py" />
+        <option value="$PROJECT_DIR$/multiple_output_classification.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-18" />
-    <option name="y" value="-18" />
-    <option name="width" value="3876" />
-    <option name="height" value="2076" />
+    <option name="x" value="-3" />
+    <option name="y" value="-3" />
+    <option name="width" value="646" />
+    <option name="height" value="392" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -251,10 +248,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2542735" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16807166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -265,7 +262,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298731" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32981783" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.20921986" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.66059446" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32598275" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -298,12 +295,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/20WIDG8E/construct_graph2_splits.py" />
     <entry file="file://$PROJECT_DIR$/Python/poker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="483">
           <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multiple_output_classification.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
