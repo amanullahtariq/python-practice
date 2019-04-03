@@ -13,6 +13,8 @@ Created from the lectures in [Udacity](https://classroom.udacity.com/courses/cs2
 - [Poker](https://github.com/amanullahtariq/python-practice/blob/dev/Python/poker.py)
 - [Knuth Fisher Yates Shuffle Algorithm](https://github.com/amanullahtariq/python-practice/blob/master/Python/knuth_shuffle_algorithm.py)
 
+## Machine Learning
+
 #### Cracking Coding Interview
 ### Algorithm
 - [Bubble Sort](https://github.com/amanullahtariq/python-practice/blob/dev/cracking_coding_interview/Algorithms/bubble_sort.py)
