@@ -12,3 +12,11 @@ from keras.layers import Input
 import tensorflow as tf
 
 
+class FashionNet:
+    @staticmethod
+    def build_category_branch(inputs, numCategories,finalAct="softmax",chanDim=1):
+
+        # Utlizie a lambda layer to convert the 3 input to a grayscale representation
+        x = Lambda(lambda c:tf.image.rgb_to_grayscale(c))(inputs)
+
+        pass
