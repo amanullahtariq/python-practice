@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81113b32-799c-46fe-ab81-9dc364931914" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multiple_output_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiple_output_classification.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,13 +39,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="44" />
-          <entry key="py" value="7531" />
+          <entry key="py" value="8309" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="44" />
-          <entry key="Python" value="7531" />
+          <entry key="Python" value="8309" />
         </counts>
       </usages-collector>
     </session>
@@ -54,11 +55,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/multiple_output_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="428">
+              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
               <folding>
                 <element signature="e#32#62#0" expanded="true" />
-                <marker date="1554734141444" expanded="true" signature="478:483" ph="..." />
+                <marker date="1554828526289" expanded="true" signature="478:483" ph="..." />
               </folding>
             </state>
           </provider>
@@ -92,10 +93,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -314,11 +315,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/multiple_output_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        <state relative-caret-position="428">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
           <folding>
             <element signature="e#32#62#0" expanded="true" />
-            <marker date="1554734141444" expanded="true" signature="478:483" ph="..." />
+            <marker date="1554828526289" expanded="true" signature="478:483" ph="..." />
           </folding>
         </state>
       </provider>
