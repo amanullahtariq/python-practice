@@ -40,6 +40,39 @@ class FashionNet:
         x = Dropout(0.25)(x)
 
         # (CONV => RELU) * 2 => POOL
+        x = Conv2D(64, (3,3), padding="same")(x)
+        x = Activation("relu")(x)
+        x = BatchNormalization(axis=chanDim)(x)
+        x = Conv2D(64,(3,3),padding="same")(x)
+        x = Activation("relu")(x)
+        x = BatchNormalization(axis=chanDim)(x)
+        x = MaxPooling2D(pool_size=(2,2))(x)
+        x = Dropout(0.25)(x)
 
+        # (CONV => RELU) * 2 => POOL
+        x = Conv2D(128, (3, 3), padding="same")(x)
+        x = Activation("relu")(x)
+        x = BatchNormalization(axis=chanDim)(x)
+        x = Conv2D(128, (3, 3), padding="same")(x)
+        x = Activation("relu")(x)
+        x = BatchNormalization(axis=chanDim)(x)
+        x = MaxPooling2D(pool_size=(2, 2))(x)
+        x = Dropout(0.25)(x)
 
-        pass
+        # Define a branch of output layers of the number of different
+        # clothing categories (i.e shirts, jeans, dresses, etc)
+        x = Flatten(x)
+        x = Dense(256)(x)
+        x = Activation("relu")(x)
+        x = Dropout(0.5)(x)
+        x = Dense(numCategories)(x)
+        x = Activation(finalAct, name="category_output")(x)
+
+        # return the category prediction
+        return x
+
+    @staticmethod
+    def builld_color_branch(inputs,numColor,finalAct="softmax",chanDim=1):
+        # CONV => RELU => POOL
+        x = Conv2D(16,(3,3),padding="same")(inputs)
+        
