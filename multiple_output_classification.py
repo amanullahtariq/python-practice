@@ -72,7 +72,12 @@ class FashionNet:
         return x
 
     @staticmethod
-    def builld_color_branch(inputs,numColor,finalAct="softmax",chanDim=1):
+    def build_color_branch(inputs,numColor,finalAct="softmax",chanDim=1):
         # CONV => RELU => POOL
         x = Conv2D(16,(3,3),padding="same")(inputs)
+        x = Activation("relu")(x)
+        x = BatchNormalization(axis=chanDim)(x)
+        x = MaxPooling2D(pool_size=(3,3))(x)
+        x = Dropout(0.25)(x)
+
         
