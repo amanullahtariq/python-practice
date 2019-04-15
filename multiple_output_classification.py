@@ -80,4 +80,5 @@ class FashionNet:
         x = MaxPooling2D(pool_size=(3,3))(x)
         x = Dropout(0.25)(x)
 
-        
+        # CONV => RELU => POOL
+        x = Conv2D(32, (3,3), padding="same")(x)
