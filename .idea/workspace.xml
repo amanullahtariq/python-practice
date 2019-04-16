@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81113b32-799c-46fe-ab81-9dc364931914" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multiple_output_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiple_output_classification.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,43 +27,52 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="6" />
+          <entry key="py" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="6" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="44" />
-          <entry key="py" value="10300" />
+          <entry key="py" value="10676" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="44" />
-          <entry key="Python" value="10300" />
+          <entry key="Python" value="10676" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/multiple_output_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="125" column="58" selection-start-line="125" selection-start-column="58" selection-end-line="125" selection-end-column="58" />
+            <state relative-caret-position="583">
+              <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
               <folding>
                 <element signature="e#32#62#0" expanded="true" />
-                <marker date="1555340870018" expanded="true" signature="478:483" ph="..." />
-                <marker date="1555340870018" expanded="true" signature="2857:2862" ph="..." />
-                <marker date="1555340870018" expanded="true" signature="2857:2866" ph="..." />
-                <marker date="1555340870018" expanded="true" signature="2866:2888" ph="..." />
+                <marker date="1555400824437" expanded="true" signature="478:483" ph="..." />
+                <marker date="1555400824437" expanded="true" signature="2857:2862" ph="..." />
+                <marker date="1555400824437" expanded="true" signature="2857:2866" ph="..." />
+                <marker date="1555400824437" expanded="true" signature="2866:2888" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -93,14 +101,18 @@
         <option value="$PROJECT_DIR$/Python/knuth_shuffle_algorithm.py" />
         <option value="$PROJECT_DIR$/Python/poker.py" />
         <option value="$PROJECT_DIR$/multiple_output_classification.py" />
+        <option value="$PROJECT_DIR$/train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -262,10 +274,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2527822" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25237092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -276,7 +288,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298731" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32981783" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27708533" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32598275" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -317,15 +329,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/multiple_output_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="125" column="58" selection-start-line="125" selection-start-column="58" selection-end-line="125" selection-end-column="58" />
+        <state relative-caret-position="583">
+          <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
           <folding>
             <element signature="e#32#62#0" expanded="true" />
-            <marker date="1555340870018" expanded="true" signature="478:483" ph="..." />
-            <marker date="1555340870018" expanded="true" signature="2857:2862" ph="..." />
-            <marker date="1555340870018" expanded="true" signature="2857:2866" ph="..." />
-            <marker date="1555340870018" expanded="true" signature="2866:2888" ph="..." />
+            <marker date="1555400824437" expanded="true" signature="478:483" ph="..." />
+            <marker date="1555400824437" expanded="true" signature="2857:2862" ph="..." />
+            <marker date="1555400824437" expanded="true" signature="2857:2866" ph="..." />
+            <marker date="1555400824437" expanded="true" signature="2866:2888" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>

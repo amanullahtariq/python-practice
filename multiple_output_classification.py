@@ -124,5 +124,10 @@ class FashionNet:
         colorBranch = FashionNet.build_color_branch(input, numColors,finalAct="softmax",chanDim=chanDims)
 
         # create model combining category and color branch
+        # there is one input (the batch of images) and
+        # two separate outputs -- one for clothing category
+        # and another for the  branch, respectively
         model = Model(inputs= input, outputs=[categoryBranch,colorBranch], name="fashionnet")
+
+        # return the constructed network architecture
         return model
