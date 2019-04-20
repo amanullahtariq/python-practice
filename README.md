@@ -9,11 +9,12 @@ My play ground for practicing python.
 
 ## Design Of Computer Porgrams
 Created from the lectures in [Udacity](https://classroom.udacity.com/courses/cs212/lessons/48632874/concepts/487343780923)
-- [Poker](https://github.com/amanullahtariq/python-practice/blob/dev/Python/poker.py)
+-Poker](https://github.com/amanullahtariq/python-practice/blob/dev/Python/poker.py)
 - [Knuth Fisher Yates Shuffle Algorithm](https://github.com/amanullahtariq/python-practice/blob/master/Python/knuth_shuffle_algorithm.py)
 
 ## Machine Learning
-- Multiple output and multiple losses
+-
+Multiple output and multiple losses
 
 #### Cracking Coding Interview
 ### Algorithm
@@ -30,6 +31,6 @@ Created from the lectures in [Udacity](https://classroom.udacity.com/courses/cs2
 - [Tree](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/tree.py)
 - [Tries Contacts](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/tries_contacts.py)
 
-#### Techniques And Concept
+### Techniques And Concept
 - [Fionacci Numbers](https://github.com/amanullahtariq/python-practice/blob/dev/cracking_coding_interview/techniques_and_concept/fibonacci_numbers.py)
 - [Bon Appetit](https://github.com/amanullahtariq/python-practice/blob/master/Python/bon_appetit.py)
