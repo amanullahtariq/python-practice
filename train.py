@@ -7,8 +7,8 @@ from keras.optimizers import Adam
 from keras.preprocessing.image import img_to_array
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.model_selection import train_test_split
-# from pyimagesearch.fashionnet import FashionNet
-# from imutils import paths
+from multiple_output_classification import FashionNet
+from imutils import paths
 import matplotlib.pyplot as plt
 import numpy as np
 import argparse
@@ -35,3 +35,29 @@ args = vars(ap.parse_args())
 
 # Initialize the number of epochs to train for, initial learning rate,
 # batch size and image dimensions
+
+EPOCHS = 50
+INIT_LR = 1e-3
+BATCH_SIZE = 32
+IMAGE_DIMS = (96, 96, 3)
+
+
+# grab the images from the file path and randomly shuffle them
+print("[INFO] loading images....")
+imagePaths = sorted(list(paths.list_images(args["dataset"])))
+random.seed(42)
+random.shuffle(imagePaths)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
