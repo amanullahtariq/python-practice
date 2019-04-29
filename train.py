@@ -66,3 +66,16 @@ for path in imagePaths:
     (color,cat) = path.split(os.path.sep)[-2].split("_")
     categoryLabels.append(cat)
     colorLabels.append(color)
+
+
+# scale the raw pixel intensities to the range [0, 1] and convert to
+# a NumPy array
+data = np.array(data, dtype="float") / 255.0
+print("[INFO] data matrix: {} images ({:.2f}MB)".format(len(imagePaths), data.nbytes / (1024 * 1000.0)))
+
+
+
+# convert the label lists to NumPy arrays prior to binarization
+categoryLabels = np.array(categoryLabels)
+colorLabels = np.array(colorLabels)
+
