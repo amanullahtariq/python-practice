@@ -82,7 +82,7 @@ print("[INFO] binarizing labels...")
 categoryLB = LabelBinarizer()
 colorLB = LabelBinarizer()
 categoryLabels = categoryLB.fit_transform(categoryLabels)
-colorLabels = colorLB.fit_transform(colorLabels)g
+colorLabels = colorLB.fit_transform(colorLabels)
 
 # Partitioning dataset into train and test split
 split = train_test_split(data, categoryLabels, colorLabels, test_size=0.2, random_state=42)
