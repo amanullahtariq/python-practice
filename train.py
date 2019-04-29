@@ -66,3 +66,25 @@ for path in imagePaths:
     (color,cat) = path.split(os.path.sep)[-2].split("_")
     categoryLabels.append(cat)
     colorLabels.append(color)
+
+
+# scale the raw pixel intensities to the range [0, 1] and convert to
+# a NumPy array
+data = np.array(data, dtype="float") / 255.0
+print("[INFO] data matrix: {} images ({:.2f}MB)".format(len(imagePaths), data.nbytes / (1024 * 1000.0)))
+
+# convert the label lists to NumPy arrays prior to binarization
+categoryLabels = np.array(categoryLabels)
+colorLabels = np.array(colorLabels)
+
+# binarize both sets of labels
+print("[INFO] binarizing labels...")
+categoryLB = LabelBinarizer()
+colorLB = LabelBinarizer()
+categoryLabels = categoryLB.fit_transform(categoryLabels)
+colorLabels = colorLB.fit_transform(colorLabels)
+
+# Partitioning dataset into train and test split
+split = train_test_split(data, categoryLabels, colorLabels, test_size=0.2, random_state=42)
+(trainX, testX, trainCategoryY, testCategoryY,	trainColorY, testColorY) = split
+
