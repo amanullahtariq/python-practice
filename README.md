@@ -32,5 +32,5 @@ Multiple output and multiple losses
 - [Tries Contacts](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/DataStructures/tries_contacts.py)
 
 ### Techniques And Concept
-- [Fionacci Numbers](https://github.com/amanullahtariq/python-practice/blob/dev/cracking_coding_interview/techniques_and_concept/fibonacci_numbers.py)
+-[Fionacci Numbers](https://github.com/amanullahtariq/python-practice/blob/dev/cracking_coding_interview/techniques_and_concept/fibonacci_numbers.py)
 - [Bon Appetit](https://github.com/amanullahtariq/python-practice/blob/master/Python/bon_appetit.py)
