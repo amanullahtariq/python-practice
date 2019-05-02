@@ -91,3 +91,5 @@ split = train_test_split(data, categoryLabels, colorLabels, test_size=0.2, rando
 # initialize our FashionNet multi-output network
 model = FashionNet.build(96, 96,numCategories=len(categoryLB.classes_), numColors=len(colorLB.classes_), finalAct="softmax")
 
+
+# Todo: complete the file
