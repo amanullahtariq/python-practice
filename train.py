@@ -92,4 +92,40 @@ split = train_test_split(data, categoryLabels, colorLabels, test_size=0.2, rando
 model = FashionNet.build(96, 96,numCategories=len(categoryLB.classes_), numColors=len(colorLB.classes_), finalAct="softmax")
 
 
-# Todo: complete the file
+# define two dictionaries: one that specifies the loss method for
+# each output of the network along with a second dictionary that
+# specifies the weight per loss
+losses = {
+    "category_output" : "categorical_crossentropy",
+    "color_input" : "categorical_crossentropy",
+}
+
+lossWeights = {"category_output": 1.0, "color_output": 1.0}
+# initialize the optimizer and compile the model
+print("[INFO] compiling model...")
+opt = Adam(lr=INIT_LR, decay=INIT_LR/EPOCHS)
+model.compile(optimizer=opt, loss=losses, loss_weights=lossWeights, metrics=["accuracy"])
+
+
+# train the network to perform multi-output classification
+H = model.fit(trainX, {"category_output": trainCategoryY, "color_output": trainColorY},
+              validation_data=({"category_output": testCategoryY, "color_output": testColorY}),
+              epochs=EPOCHS,verbose=1)
+
+# save the model to disk
+print("[INFO] serializing network...")
+#model.save(args["model"])
+
+
+# save the category binarizer to disk
+print("[INFO] serializing category label binarizer...")
+# f = open(args["categorybin"], "wb")
+# f.write(pickle.dumps(categoryLB))
+# f.close()
+
+
+# save the color binarizer to disk
+print("[INFO] serializing color label binarizer...")
+# f = open(args["colorbin"], "wb")
+# f.write(pickle.dumps(colorLB))
+# f.close()
