@@ -63,10 +63,9 @@ for path in imagePaths:
     # extract the clothing color and category from the path and
     # update the respective lists
 
-    (color,cat) = path.split(os.path.sep)[-2].split("_")
+    (color, cat) = path.split(os.path.sep)[-2].split("_")
     categoryLabels.append(cat)
     colorLabels.append(color)
-
 
 # scale the raw pixel intensities to the range [0, 1] and convert to
 # a NumPy array
@@ -86,35 +85,34 @@ colorLabels = colorLB.fit_transform(colorLabels)
 
 # Partitioning dataset into train and test split
 split = train_test_split(data, categoryLabels, colorLabels, test_size=0.2, random_state=42)
-(trainX, testX, trainCategoryY, testCategoryY,	trainColorY, testColorY) = split
+(trainX, testX, trainCategoryY, testCategoryY, trainColorY, testColorY) = split
 
 # initialize our FashionNet multi-output network
-model = FashionNet.build(96, 96,numCategories=len(categoryLB.classes_), numColors=len(colorLB.classes_), finalAct="softmax")
-
+model = FashionNet.build(96, 96, numCategories=len(categoryLB.classes_), numColors=len(colorLB.classes_),
+                         finalAct="softmax")
 
 # define two dictionaries: one that specifies the loss method for
 # each output of the network along with a second dictionary that
 # specifies the weight per loss
 losses = {
-    "category_output" : "categorical_crossentropy",
-    "color_input" : "categorical_crossentropy",
+    "category_output": "categorical_crossentropy",
+    "color_input": "categorical_crossentropy",
 }
 
 lossWeights = {"category_output": 1.0, "color_output": 1.0}
 # initialize the optimizer and compile the model
 print("[INFO] compiling model...")
-opt = Adam(lr=INIT_LR, decay=INIT_LR/EPOCHS)
+opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
 model.compile(optimizer=opt, loss=losses, loss_weights=lossWeights, metrics=["accuracy"])
-
 
 # train the network to perform multi-output classification
 H = model.fit(trainX, {"category_output": trainCategoryY, "color_output": trainColorY},
               validation_data=({"category_output": testCategoryY, "color_output": testColorY}),
-              epochs=EPOCHS,verbose=1)
+              epochs=EPOCHS, verbose=1)
 
 # save the model to disk
 print("[INFO] serializing network...")
-#model.save(args["model"])
+# model.save(args["model"])
 
 
 # save the category binarizer to disk
@@ -129,3 +127,13 @@ print("[INFO] serializing color label binarizer...")
 # f = open(args["colorbin"], "wb")
 # f.write(pickle.dumps(colorLB))
 # f.close()
+
+# plot the total loss, category loss and color loss
+lossNames = ["loss", "category_output_loss", "color_output_loss"]
+plt.style.us("ggplot")
+(fig, ax) = plt.subplot(3, 1, fig_size=(13, 13))
+
+# loop over the loss names
+for (i,l) in enumerate(lossNames):
+    # plot the loss for both training and validation data
+    title = "Loss for {}".format(l)
