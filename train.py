@@ -88,7 +88,7 @@ split = train_test_split(data, categoryLabels, colorLabels, test_size=0.2, rando
 (trainX, testX, trainCategoryY, testCategoryY, trainColorY, testColorY) = split
 
 # initialize our FashionNet multi-output network
-model = FashionNet.build(96, 96, numCategories=len(categoryLB.classes_), numColors=len(colorLB.classes_),
+model = FashionNet.build_model(96, 96, numCategories=len(categoryLB.classes_), numColors=len(colorLB.classes_),
                          finalAct="softmax")
 
 # define two dictionaries: one that specifies the loss method for
@@ -136,4 +136,37 @@ plt.style.us("ggplot")
 # loop over the loss names
 for (i,l) in enumerate(lossNames):
     # plot the loss for both training and validation data
-    title = "Loss for {}".format(l)
+    title = "Loss for {}".format(l) if l != "loss" else "Total Loss"
+    ax[i].set_title(title)
+    ax[i].set_xlabel("Epoch #")
+    ax[i].set_ylabel("Loss")
+    ax[i].plot(np.arange(0, EPOCHS), H.history[l], label=l)
+    ax[i].plot(np.arange(0, EPOCHS), H.history["val_" + l], label="val_" + l)
+    ax[i].legend()
+
+# save the losses figure and create a new figure for the accuracies
+plt.tight_layout()
+plt.savefig("{}_losses.png".format(args["plot"]))
+plt.close()
+
+
+# create a new figure for the accuracies
+accuracyNames = ["category_output_acc", "color_output_acc"]
+plt.style.use("ggplot")
+(fig, ax) = plt.subplots(2, 1, figsize=(8, 8))
+
+# loop over the accuracy names
+for (i, l) in enumerate(accuracyNames):
+    # plot the loss for both the training and validation data
+    ax[i].set_title("Accuracy for {}".format(l))
+    ax[i].set_xlabel("Epoch #")
+    ax[i].set_ylabel("Accuracy")
+    ax[i].plot(np.arange(0, EPOCHS), H.history[l], label=l)
+    ax[i].plot(np.arange(0, EPOCHS), H.history["val_" + l],
+               label="val_" + l)
+    ax[i].legend()
+
+# save the accuracies figure
+plt.tight_layout()
+plt.savefig("{}_accs.png".format(args["plot"]))
+plt.close()
