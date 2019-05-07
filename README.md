@@ -13,7 +13,7 @@ Created from the lectures in [Udacity](https://classroom.udacity.com/courses/cs2
 - [Knuth Fisher Yates Shuffle Algorithm](https://github.com/amanullahtariq/python-practice/blob/master/Python/knuth_shuffle_algorithm.py)
 
 ## Machine Learning
-- Multiple output and multiple losses
+- [Multiple output and multiple losses]()
 
 #### Cracking Coding Interview
 ### Algorithm
