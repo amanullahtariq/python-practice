@@ -16,6 +16,11 @@ Created from the lectures in [Udacity](https://classroom.udacity.com/courses/cs2
 - [Multiple output and multiple losses](https://github.com/amanullahtariq/python-practice/tree/master/multiple_loss)
 
 #### Cracking Coding Interview
+- [Chapter 1 - Arrays & Strings]()
+- [Chapter 2 - Linked Lists]()
+- [Chapter 3 - Stacks and Queues]()
+
+
 ### Algorithm
 - [Bubble Sort](https://github.com/amanullahtariq/python-practice/blob/dev/cracking_coding_interview/Algorithms/bubble_sort.py)
 - [Merge Sort](https://github.com/amanullahtariq/python-practice/blob/master/cracking_coding_interview/Algorithms/merge_sort.py)
