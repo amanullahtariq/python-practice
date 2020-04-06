@@ -1,4 +1,5 @@
-# Cracking-The-Coding-Interview
+# *Cracking the Coding Interview, 6th Edition*
+
 Python solutions to problems in the book: [Cracking The Coding Interview 6th Ed.](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?crid=2KLI55NFE3G8H&dchild=1&keywords=cracking+the+coding+interview&qid=1586043235&sprefix=cracking+%2Caps%2C324&sr=8-1)
 
 #### Chapter 1 - Arrays & Strings
@@ -29,3 +30,10 @@ Python solutions to problems in the book: [Cracking The Coding Interview 6th Ed.
 - [3.4 Queue via Stacks]()
 - [3.5 Sort Stack]()
 - [3.6 Animal Shelter]()
+
+
+## How to use?
+
+To run the programs, just use the `python ChapterX/filename.py` command.
+
+The test cases are included in the solution files.
